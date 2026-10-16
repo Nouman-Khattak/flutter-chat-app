@@ -6,12 +6,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Supabase.initialize(
     url: 'https://wvadpruimayrltpnhblb.supabase.co',
+    // ignore: deprecated_member_use
     anonKey: 'sb_publishable_89qEfeVQJjQvPoFprAS6gw_EqzER6aP',
   );
   runApp(const App());
